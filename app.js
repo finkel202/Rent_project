@@ -9,7 +9,6 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 
-
 mongoose
   .connect('mongodb://localhost/rent-project', {useNewUrlParser: true})
   .then(x => {
@@ -50,7 +49,6 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.locals.title = 'Express - Generated with IronGenerator';
 
 
-const PORT = process.env.PORT || 3000
 
 const index = require('./routes/index');
 app.use('/', index);
